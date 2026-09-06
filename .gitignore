@@ -1,0 +1,7 @@
+.env
+.venv/
+data/
+video/
+__pycache__/
+*.pyc
+tools_discovered.json

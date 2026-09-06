@@ -1,0 +1,13 @@
+symbols: ["BTCUSDT", "ETHUSDT"]
+quote_asset: "USDT"
+
+llm:
+  provider: openai
+  base_url: https://api.openai.com/v1
+  model: gpt-4o-mini
+  api_key_env: OPENAI_API_KEY
+  temperature: 0.2
+  max_proposals: 3
+
+mcp:
+  server_url: https://agent.binance.com/mcp/agentic

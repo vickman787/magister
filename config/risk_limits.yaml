@@ -1,0 +1,7 @@
+max_notional_usdt: 25
+max_notional_per_symbol_usdt: 15
+max_open_positions: 3
+max_daily_loss_usdt: 10
+allow_futures: false
+allowed_symbols: ["BTCUSDT", "ETHUSDT"]
+kill_switch_file: data/kill_switch
