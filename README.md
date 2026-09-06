@@ -66,6 +66,9 @@ powershell -ExecutionPolicy ByPass -c "irm https://chatgpt.com/codex/install.ps1
 codex mcp add binance-mcp-server --url https://agent.binance.com/mcp/agentic --oauth-client-id codex
 ```
 
+> Older Codex CLI versions don't support `--oauth-client-id` — if it errors, run the
+> command without that flag: `codex mcp add binance-mcp-server --url https://agent.binance.com/mcp/agentic`
+
 2. Run the client and authenticate when Binance shows the "Agentic Account Access" consent screen.
    Binance auto-creates the **Agentic sub-account** on first authorization.
 3. Fund it (it starts empty; agents can never pull from your main account):
