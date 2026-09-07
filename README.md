@@ -19,9 +19,41 @@ Magister never holds exchange keys. It decides what is safe to trade; your AI cl
 Binance Agent OS over MCP with OAuth -- executes only the orders Magister approves, restating each
 one and waiting for your confirmation.
 
-## Architecture at a glance
+## Architecture
 
-See `docs/ARCHITECTURE.md` for the diagram and data flow.
+```
+                        +-----------------------------------+
+                        |         Analyst (LLM agent)       |
+                        |  reads market snapshot           |
+                        |  proposes trades (JSON)          |
+                        |  NO Binance access               |
+                        +----------------+------------------+
+                                         |
+                                         | Proposal {symbol, side, quote, thesis}
+                                         v
+                        +----------------+------------------+
+                        |  RiskEngine (deterministic rules) |
+                        |  clamps / rejects / kill switch   |
+                        +----------------+------------------+
+                                         |
+                                         | approved order
+                                         v
+                        +----------------+------------------+
+                        |  OrderDesk (data/orders.jsonl)    |
+                        +----------------+------------------+
+                                         |
+                                         | AI client executes via Agent OS MCP
+                                         | restates order, human approves in chat
+                                         v
+                        +-----------------------------------+
+                        |  AuditLedger (append-only JSONL)  |
+                        |  report / positions / PnL         |
+                        +-----------------------------------+
+```
+
+## Modules
+
+See `docs/ARCHITECTURE.md` for the full diagram and data flow.
 
 - `magister/analyst.py` - LLM proposes trades from a market snapshot. Has no Binance access.
 - `magister/risk.py` - hard-coded rules: per-symbol caps, total exposure cap, max open positions,
