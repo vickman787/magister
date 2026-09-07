@@ -111,10 +111,10 @@ exists on Binance's side for the connected agents.
 
 ## Submission checklist (Track A)
 
-- [ ] Follow @Binance and repost the hackathon post
-- [ ] Record a <2 min video: problem -> architecture diagram -> guardrail demo -> real order through
+- [x] Follow @Binance and repost the hackathon post
+- [x] Record a <2 min video: problem -> architecture diagram -> guardrail demo -> real order through
       Agent OS MCP with human approval -> audit report
-- [ ] Make this repo public on GitHub with the README and diagram
-- [ ] Reply/quote the post with the video + repo link
-- [ ] Complete the survey linked in the post
-- [ ] Submit before the deadline (do not wait for the final day)
+- [x] Make this repo public on GitHub with the README and diagram
+- [x] Reply/quote the post with the video + repo link
+- [x] Complete the survey linked in the post
+- [x] Submit before the deadline (do not wait for the final day)
