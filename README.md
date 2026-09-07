@@ -149,4 +149,5 @@ exists on Binance's side for the connected agents.
 - [x] Make this repo public on GitHub with the README and diagram
 - [x] Reply/quote the post with the video + repo link
 - [x] Complete the survey linked in the post
-- [x] Submit before the deadline (do not wait for the final day)
+- [x] Submit before the deadline
+- [x] Skill PR to the official Binance Skills Hub: https://github.com/binance/binance-skills-hub/pull/335 (do not wait for the final day)
